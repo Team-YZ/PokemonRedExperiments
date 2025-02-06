@@ -86,7 +86,12 @@ if __name__ == '__main__':
             counter = 0
             # Combine the last 3 frames
             combined = np.hstack((x[0], x[1], x[2]))
+            # plt.imshow(combined)
+            # plt.axis('off')
+            # plt.show()
+            
             X.append(combined)
+            
             
         action = 7 # pass action
         try:
@@ -106,7 +111,6 @@ if __name__ == '__main__':
         x[counter] = combined
         
         counter += 1
-        
         
         if truncated:
             break
